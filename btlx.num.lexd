@@ -1,0 +1,36 @@
+PATTERNS
+(TeenRoot | (NumRoot TyInfl)) TeenInfl < One
+TeenRoot (TeenInfl NumRoot)? CardInfl
+NumRoot (TyInfl > (TeenInfl NumRoot1))? CardInfl
+GrandRoot CardInfl                                        #А ЧТО ДЕЛАТЬ С 200-900 и 2000-10000???????????????????????????????????????
+
+LEXICON One
+<one>:цеб # один УТОЧНИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИТЬ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON NumRoot
+<two>:кӀе # два
+<three>:гьабу # три
+<four>:бугъу # четыре
+<five>:ищту # пять ПРОВЕРИТЬ И УТОЧНИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИТЬ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<six>:интлӀи # шесть УТОЧНИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИИТЬ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<seven>:гьакьу # семь
+<eight>:бикьи # восемь
+<nine>:гьачӀа # девять
+
+ALIAS NumRoot NumRoot1
+
+LEXICON TeenRoot
+<ten>:гьацӀа # десять
+
+LEXICON TeenInfl
+<teen>:лъи # 11-19
+
+LEXICON TyInfl
+<ty>:цӀали # 20-90 десятки
+
+LEXICON GrandRoot
+<hundred>:бешуну # сто
+<thousand>:азару # тысяча
+
+LEXICON CardInfl
+<card>:да

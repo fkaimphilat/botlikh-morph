@@ -1,18 +1,21 @@
 PATTERNS
-(TeenRoot | (NumRoot TyInfl)) TeenInfl < One
+(TeenRoot | (NumRoot TyInfl)) TeenInfl < One ClM
 TeenRoot (TeenInfl NumRoot)? CardInfl
 NumRoot (TyInfl > (TeenInfl NumRoot1))? CardInfl
-GrandRoot CardInfl
+NumRoot? GrandRoot CardInfl # требуется уточнение по формам >2000
 
 LEXICON One
-<one>:цеб # один 
+<one>:це # один
+
+LEXICON ClM
+<inanimate>:б # показатель класса
 
 LEXICON NumRoot
 <two>:кӀе # два
 <three>:гьабу # три
 <four>:бугъу # четыре
-<five>:ищту # пять 
-<six>:интлӀи # шесть 
+<five>:ишту # пять
+<six>:интлӀи # шесть
 <seven>:гьакьу # семь
 <eight>:бикьи # восемь
 <nine>:гьачӀа # девять

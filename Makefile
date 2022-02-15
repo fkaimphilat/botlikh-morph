@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := btlx.num.analyzer.hfst
+.DEFAULT_GOAL := btlx.num.generator.tr.hfst
 
 # generate analyzer and generator
 btlx.num.analyzer.hfst: btlx.num.generator.hfst

@@ -1,0 +1,68 @@
+PATTERNS
+Root Cont ContCase
+Root Sub SubCase
+Root[alpha] Super SuperCase[alpha]
+Root[beta] Super SuperCase[beta]
+Root ApudCluster
+Root[ifin] In[ifin] InCase[ifin]
+Root[ufin] In[ufin] InCase[ufin]
+Root[cfin] In[cfin] InCase[cfin]
+
+LEXICON Root
+гьи[beta,ifin] # окно
+#амбур[beta,ufin]  крыша
+хур[alpha,cfin] #поле
+
+LEXICON Super
+<n><super>:
+
+LEXICON SuperCase
+<essive>:у[alpha]
+<essive>:е[beta]
+<lative>:а[alpha,beta]
+<elative>:уру[alpha]
+<elative>:еру[beta]
+<translative>:уку[alpha]
+<translative>:еку[beta]
+
+LEXICON Cont
+<n><cont>:чӀ
+
+LEXICON ContCase
+<essive>:у
+#<lative>:
+<elative>:уру
+<translative>:уку
+
+PATTERN ApudCluster
+(Apud[x] ApudCase[x])|(Apud[q] ApudCase[q])
+
+LEXICON Apud
+<n><apud>:x[x]
+<n><apud>:къ[q]
+
+LEXICON ApudCase
+<essive>:e[x]
+<essive>:и[x,q]
+<lative>:a[x,q]
+<elative>:еру[x]
+<elative>:иру[x,q]
+<translative>:еку[x]
+<translative>:ику[x,q]
+
+LEXICON In
+<n><in>:лъ[ufin]
+<n><in>:лълъ[ifin]
+<n><in>:лӀ[cfin]
+
+LEXICON InCase[ufin,cfin,ifin]
+<essive>:и[-ifin]
+<essive>:у[-cfin,-ufin]
+<lative>:а
+<elative>:иру
+<translative>:ику
+
+ALIAS InCase SubCase
+
+LEXICON Sub
+<n><sub>:кь

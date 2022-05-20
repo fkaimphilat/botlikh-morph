@@ -1,0 +1,54 @@
+PATTERNS
+NounAbs [<n>:] Absolutive
+NounObl [<n>:] (Ergative|Dative)
+NounObl[gen1] [<n>:] Genetive1
+NounObl[-gen1] [<n>:] Genetive2
+
+LEXICON NounAbs1type[gen1]
+има #отец
+
+LEXICON NounAbsOthers
+кӀату #конь
+гьуркьа #орех
+ила #мать
+xъуча #книга
+
+PATTERN NounAbs
+NounAbs1type[gen1]|NounAbsOthers
+
+LEXICON NounObl
+кӀату:кӀату #конь
+гьуркьа:гьуркьа #орех
+ила:илу #мать
+има:иму[gen1] #отец
+xъуча:xъучу #книга
+
+LEXICON Absolutive
+<abs>:
+
+LEXICON Ergative
+<erg>:ди
+
+LEXICON Dative
+<dat>:и
+<dat>:ий
+
+LEXICON Genetive2
+<gen>:лъи
+
+PATTERN Genetive1
+Gen1 CL
+
+LEXICON Gen1
+<gen>:
+
+LEXICON CL
+<m>:в
+<f>:й
+<nl>:б
+<nl>:м
+<an>:р
+<an>:л
+<an>:н
+<inan>:б
+<inan>:м

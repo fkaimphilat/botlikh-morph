@@ -1,10 +1,13 @@
-.DEFAULT_GOAL := btlx.num.generator.tr.hfst
+.DEFAULT_GOAL := btlx.analyzer.tr.hfst
+
+btlx.lexd: $(wildcard ava_*.lexd)
+	cat btlx.*.lexd > btlx.lexd
 
 # generate analyzer and generator
-btlx.num.analyzer.hfst: btlx.num.generator.hfst
-	hfst-invert btlx.num.generator.hfst -o btlx.num.analyzer.hfst
-btlx.num.generator.hfst: btlx.num.lexd
-	lexd btlx.num.lexd | hfst-txt2fst -o btlx.num.generator.hfst
+btlx.analyzer.hfst: btlx.generator.hfst
+	hfst-invert btlx.generator.hfst -o btlx.analyzer.hfst
+btlx.generator.hfst: btlx.lexd
+	lexd btlx.lexd | hfst-txt2fst -o btlx.generator.hfst
 
 # generate transliteraters
 cy2la.transliterater.hfst: la2cy.transliterater.hfst
@@ -15,9 +18,9 @@ correspondence.hfst: correspondence
 	hfst-strings2fst -j correspondence -o correspondence.hfst
 
 # generate analyzer and generator for transcription
-btlx.num.analyzer.tr.hfst: btlx.num.generator.tr.hfst
+btlx.analyzer.tr.hfst: btlx.generator.tr.hfst
 	hfst-invert $< -o $@
-btlx.num.generator.tr.hfst: btlx.num.generator.hfst cy2la.transliterater.hfst
+btlx.generator.tr.hfst: btlx.generator.hfst cy2la.transliterater.hfst
 	hfst-compose $^ -o $@
 
 # remove all hfst files

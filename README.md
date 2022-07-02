@@ -23,4 +23,11 @@ The current work is based on the linguistic description of Botlikh by Azaev (200
 
 ## To cite
 
-Here you will be able to find information about citing soon.
+You can cite the paper draft using one of the forms listed below:
+
+
+- Progress report on developing morphological analyzers for
+low-resource Nakh-Dagestani languages. H. Cupery, I. Philatov. Term paper at the School of Linguistics, NRU HSE, 2022.
+- Hanna Cupery, Igor Philatov. “Progress report on developing morphological analyzers for
+low-resource Nakh-Dagestani languages”. NRU HSE (2022): 7. pag.
+- Куперай Х., Филатов И. Обзор хода работы по созданию морфологических анализаторов для малоресурсных нахско-дагестанских языков. НИУ ВШЭ. Москва, 2022. 7 с.
